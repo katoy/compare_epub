@@ -165,5 +165,6 @@ DEPENDENCIES
   rake
   rspec
   rubocop
+  simplecov
   simplecov-rcov
   zipruby
