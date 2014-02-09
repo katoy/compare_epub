@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/katoy/compare_epub.png?branch=master)](https://travis-ci.org/katoy/compare_epub)
 [![Dependency Status](https://gemnasium.com/katoy/compare_epub.png)](https://gemnasium.com/katoy/compare_epub)
-[![Coverage Status](https://coveralls.io/repos/katoy/compare_epub/badge.png?branch=master)](https://coveralls.io/r/katoy/compare_epub?branch=master)
+[![Coverage Status](https://coveralls.io/repos/katoy/compare_epub/badge.png)](https://coveralls.io/r/katoy/compare_epub)
 
 This is a tool for compareing epub files.
 
