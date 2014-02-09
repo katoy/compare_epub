@@ -8,24 +8,36 @@ This is a tool for compareing epub files.
 
 これは  epub を比較するツールです。
 
+使用例:
+-------
 
-## Installation
+```
+  $ bin/compaare_epub data/book.epub data/book1.epub
+  false
+  $ ls work-diff/diff/
+  ch003.xhtml.txt
+  $ cat work-diff/diff/ch003.xhtml.txt
+  - text:Chapter two has just begun.
+  + text:Chapter two has just begun. 123
+```
 
-Add this line to your application's Gemfile:
+book.epub, bool1.epub は、 それぞれ pandoc をつかって book.txt, book1.txt から生成した epub ファイルです。  
+差は diff data/book.txt data/book1.txt で確認できます。  
 
-    gem 'compare_epub'
+```
+  $ diff data/book.txt data/book1.txt
+  12a13,14
+  > 123
+  >
+```
 
-And then execute:
 
-    $ bundle
+動作概要:
+----------
 
-Or install it yourself as:
+epub ファイルを zip 解凍して、xml の  dom レベルで比較をしています。  
+いくつかの要素は比較対象から除外をしています。 (作成日時など)  
 
-    $ gem install compare_epub
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
