@@ -12,6 +12,5 @@ group :development do
   gem 'pry'
 end
 
-gem 'rake'
 gem 'nokogiri-diff'
 gem 'zipruby'
