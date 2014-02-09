@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require  File.expand_path(File.dirname(__FILE__) + '/../lib/compare_epub.rb')
+
+class Main
+  include CompareEpub
+end
+
+ret = Main.new().exec(ARGV)
+exit ret
