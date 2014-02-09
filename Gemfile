@@ -5,6 +5,7 @@ gemspec
 
 group :development do
   gem 'rspec'
+  gem 'simplecov'
   gem 'simplecov-rcov'
   gem 'coveralls'
   gem 'metric_fu'
