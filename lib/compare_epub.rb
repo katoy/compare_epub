@@ -119,14 +119,14 @@ module CompareEpub
           end
         end
       end
-      unless is_same
+      if is_same
+        FileUtils.rm_f(diff_text)
+      else
         diffs += 1
         diffs_name << f2
         toDir = Pathname(f2).parent
         FileUtils.mkdir_p(toDir) unless File.exists?(toDir)
         FileUtils.mv(diff_text, "#{f2}.txt")
-      else
-        FileUtils.rm_f(diff_text)
       end
       doc0 = doc1 = nil
       GC.start
@@ -148,7 +148,7 @@ module CompareEpub
       dir_0 = "#{out_dir}/#{File.basename(epub_0)}"
       dir_1 = "#{out_dir}/#{File.basename(epub_1)}"
       diff_out = "#{out_dir}/diff"
-        ret = compare_tree(dir_0, dir_1, diff_out, "#{out_dir}/work_diff.txt")
+      ret = compare_tree(dir_0, dir_1, diff_out, "#{out_dir}/work_diff.txt")
       ans = 'true' if ret[:diffs_name].size == 0 && ret[:miss_name].size == 0 && ret[:adds_name].size == 0
 
     rescue => e
@@ -172,7 +172,7 @@ module CompareEpub
 
     if argv.size < 2
       show_usage
-      return 1
+      return 1  # Error
     end
 
     epub_diff = 'work-diff'   # デフォルト値
@@ -190,7 +190,7 @@ module CompareEpub
       # FileUtils.rm_rf(epub_diff) if argv.size == 3 # diff を指定省略したら 削除する
     end
     puts ans
-    return 0
+    0  # success
   end
   # --- End of Fiel ---
 
