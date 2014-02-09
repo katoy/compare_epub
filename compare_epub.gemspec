@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CompareEpub::VERSION
   spec.authors       = ["katoy"]
   spec.email         = ["youichikato@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Compare epub files.}
+  spec.description   = %q{Compare epub files.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
