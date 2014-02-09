@@ -31,6 +31,22 @@ book.epub, bool1.epub は、 それぞれ pandoc をつかって book.txt, book1
   >
 ```
 
+book.epub, book1.epub は epubcheck でのチェックをパスします。
+
+```
+  $ epubcheck book.epub
+  Epubcheck Version 3.0.1
+
+  Validating against EPUB version 2.0
+  No errors or warnings detected.
+
+  $ epubcheck book1.epub
+  Epubcheck Version 3.0.1
+
+  Validating against EPUB version 2.0
+  No errors or warnings detected.
+```
+
 
 動作概要:
 ----------

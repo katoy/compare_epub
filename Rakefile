@@ -11,6 +11,7 @@ task :default => :spec
 # clear
 desc 'Delete working files'
 task :clean do
+  system 'rm -f README.html'
   system 'rm -fr doc/*'
   system 'rm -fr coverage'
   system 'rm -fr log/*'
