@@ -4,7 +4,10 @@
 [![Dependency Status](https://gemnasium.com/katoy/compare_epub.png)](https://gemnasium.com/katoy/compare_epub)
 [![Coverage Status](https://coveralls.io/repos/katoy/compare_epub/badge.png?branch=master)](https://coveralls.io/r/katoy/compare_epub?branch=master)
 
-TODO: Write a gem description
+This is a tool for compareing epub files.
+
+これは  epub を比較するツールです。
+
 
 ## Installation
 
